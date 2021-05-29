@@ -1,0 +1,19 @@
+k8 cluster --> logical name
+cluster is a combinaion of virtual machines.
+
+K8 Object:- 
+Deployment
+Replicaset
+Pods
+Service
+configMap
+Secret
+
+KInd means what type of object it is.
+Replicas means number of pods.
+
+kubenetes have multiple virtual machines and container will run in pods or nodes
+
+pulling the image is not happening so for that make imagepull policy true
+
+https://docs.google.com/document/d/1S1nd5nLleu5H1AOYwB8u_5Rx_SMhISmf7Xpg3-sGcCk/edit#

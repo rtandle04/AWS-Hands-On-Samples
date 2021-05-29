@@ -1,0 +1,80 @@
+IMp links:- istio.io/latet/docs/examples/bookinfo
+
+1. istio is a mesh based architecture
+it provides sidecar facility to all the services to talk
+
+
+step 1) install istio 
+step 2) download the project packages
+step 3) run the service 
+step 4) run the gateway services i.e. ingress
+
+istoctl install
+
+istioctl install --set profile=demo -y
+
+
+sudo apt-get 
+kubectl apply -n bookinfo -f
+
+
+-------------------------------------------  ---------------------------------------------------------------------------------------------------------------
+
+To create a cluster from windows:- did not work seen below error
+aws ecs create-cluster --cluster-name ECS-DEV-TEST
+
+An error occurred (UnrecognizedClientException) when calling the CreateCluster operation: The security token included in the request is invalid.
+AMAZONEKSCLUSTERPOLICY
+
+To create cluster using eksctl:- 
+$eksctl create cluster --name myDemoeks --region us-east-2 --fargate
+After cretaing assign the work load nothing but creating the ec2 instances.
+
+$kubectl apply -f sample-service.yaml -->to deploy the service
+kubectl get all -n my-namespace
+
+Required to do:-
+1. ECS
+2. EC2
+
+Two Roles for ECS:- 
+1. AMAZON EKS WORKER NODE POLICY
+2. EC2 CONTAINER REGISTY READONLY
+AmazonEC2ContainerRegistryReadOnly.
+AmazonEKSWorkderNodePolicy.
+
+kubenerete policy :-
+1. EKS policy only one is required to run kubeneretes.
+
+To Delete the cluster:-
+eksctl delete cluster --name my-cluster --region us-east-2
+
+fargate --> it will create by ignoring all the things iam  permissions, auth, etc
+
+.kube --> this dir has all config, easy to change the context.
+
+kubeconfig
+$aws eks --region update-kubeconfig --name configname
+
+kubectl get svc
+sample workload deployment for yaml file
+
+if type is load balancer we can access it via public ip address.
+
+eksctl create cluster --name my-cluster --region us-east-2 --fargate
+
+we don't expose end points directly we use some reverse proxy in aws
+
+
+
+
+
+apigateway
+ngnix.
+rules.
+predefined rules yaml file 
+
+bunch of 
+
+
+
